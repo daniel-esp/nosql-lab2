@@ -11,6 +11,18 @@ public class Comentario {
 	private String texto;
 	private String emailUsuario;
 	private ObjectId comentarioPadre;
+
+	public Comentario() {
+		super();
+	}
+	
+	public Comentario(ObjectId id, String texto, String emailUsuario, ObjectId comentarioPadre) {
+		super();
+		this.id = id;
+		this.texto = texto;
+		this.emailUsuario = emailUsuario;
+		this.comentarioPadre = comentarioPadre;
+	}
 	
 	public ObjectId getId() {
 		return id;
@@ -44,17 +56,6 @@ public class Comentario {
 		this.comentarioPadre = comentarioPadre;
 	}
 
-	public Comentario() {
-		super();
-	}
-	
-	public Comentario(String texto, String email, ObjectId comentarioPadre) {
-		super();
-		this.texto = texto;
-		this.emailUsuario = email;
-		this.comentarioPadre = comentarioPadre;
-	}
-	
 	@BsonIgnore
 	public DataComentario getDatatype() {
 		DataComentario data = new DataComentario();

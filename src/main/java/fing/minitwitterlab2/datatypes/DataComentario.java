@@ -2,6 +2,9 @@ package fing.minitwitterlab2.datatypes;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL) 
 public class DataComentario {
 	
 	private String id;

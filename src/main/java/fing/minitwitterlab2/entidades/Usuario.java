@@ -14,11 +14,12 @@ public class Usuario {
 		super();
 	}
 	
-	public Usuario(String email) {
+	public Usuario(ObjectId id, String email) {
 		super();
+		this.id = id;
 		this.email = email;
 	}
-	
+
 	public ObjectId getId() {
 		return id;
 	}
